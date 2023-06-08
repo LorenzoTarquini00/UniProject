@@ -1,0 +1,22 @@
+<mat-toolbar color="primary"> <!-- toolbar  -->
+    <mat-icon [routerLink]="['/']" routerLinkActive="router-link-active">home</mat-icon> <!-- icon to navigate home -->
+
+    <span class="spacer"></span><a style="color: white">SCRAMBLE</a> <!-- central text -->
+
+
+    <span class="spacer"></span>
+    <button [matMenuTriggerFor]="appMenu" mat-raised-button color="accent"
+        *ngIf="displayName$ | async as displayName;else login">{{displayName}}</button>
+    <!-- mat-raised-button when user is loggedin with his name on -->
+    <ng-template #login>
+        <button mat-raised-button color="accent" [routerLink]="['/login']"
+            routerLinkActive="router-link-active">Login</button> <!-- button that redirect you to the login page -->
+    </ng-template>
+    <mat-menu #appMenu> <!-- dropdown menu -->
+        <ng-container *ngIf="isAdmin$ | async"> <!-- when user is an admin reveals the leaderboard option -->
+            <button mat-menu-item [routerLink]="['/leaderboard']"
+                routerLinkActive="router-link-active">Leaderboard</button>
+        </ng-container>
+        <button mat-menu-item (click)="logout()">Logout</button> <!-- option to loout -->
+    </mat-menu>
+</mat-toolbar>

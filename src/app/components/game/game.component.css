@@ -1,0 +1,236 @@
+body {
+    background-image: linear-gradient(white, rgb(63, 81, 181));
+    /* gradient for the background */
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 93.2vh;
+}
+
+input[type=text] {
+    /* input box grey when not used*/
+    width: 100%;
+    border: 2px solid #aaa;
+    border-radius: 4px;
+    margin: 8px 0;
+    outline: none;
+    padding: 8px;
+    box-sizing: border-box;
+    transition: 0.3s;
+}
+
+input[type=text]:focus {
+    /* input box become blue when clicked */
+    border-color: dodgerblue;
+    box-shadow: 0 0 8px 0 dodgerblue;
+}
+
+.neonText {
+    /* neon effect */
+
+    text-shadow:
+        0 0 7px #fff,
+        0 0 10px #fff,
+        0 0 21px #fff,
+        0 0 42px #f09,
+        0 0 82px #f09,
+        0 0 92px #f09,
+        0 0 102px #f09,
+        0 0 151px #f09,
+}
+
+h1 {
+    /* highscore counter and gameover screen design with outline */
+    -webkit-text-stroke: 1px white;
+    text-shadow: 0 9px 12px black;
+    font-size: 40px;
+    position: relative;
+    padding-bottom: 20px;
+    text-align: center;
+    font-weight: 400;
+    line-height: 1;
+
+}
+
+h2 {
+    /* title design blue colored with glow animation */
+    color: rgb(63, 81, 181);
+    font-size: 60px;
+    position: relative;
+    padding-bottom: 20px;
+    text-align: center;
+    font-weight: 400;
+    line-height: 1;
+    animation: glow 0.50s ease-in-out infinite alternate-reverse;
+}
+
+h4 {
+    /* scrambled word with glows effect */
+    font-size: 60px;
+    position: relative;
+    padding-bottom: 20px;
+    text-align: center;
+    font-weight: 400;
+    line-height: 1;
+    animation: glows 0.50s ease-in-out infinite alternate-reverse;
+}
+
+h6 {
+    /* score counter design */
+    -webkit-text-stroke: 2px white;
+    text-shadow: 0 9px 12px black;
+    font-size: 60px;
+    position: relative;
+    padding-bottom: 20px;
+    text-align: center;
+    font-weight: 400;
+    line-height: 1;
+
+}
+
+@keyframes glow {
+
+    /* glow animation pink version */
+    100% {
+        text-shadow:
+            0 0 4px #fff,
+            0 0 11px #fff,
+            0 0 19px #fff,
+            0 0 40px #f09,
+            0 0 80px #f09,
+            0 0 90px #f09,
+            0 0 100px #f09,
+            0 0 150px #f09;
+    }
+
+    0% {
+        text-shadow:
+            0 0 4px #fff,
+            0 0 10px #fff,
+            0 0 18px #fff,
+            0 0 38px #f09,
+            0 0 73px #f09,
+            0 0 80px #f09,
+            0 0 94px #f09,
+            0 0 140px #f09;
+    }
+}
+
+@keyframes glows {
+
+    /* glow animation green version */
+    100% {
+        text-shadow:
+            0 0 4px #fff,
+            0 0 11px #fff,
+            0 0 19px #fff,
+            0 0 40px rgb(3, 156, 67),
+            0 0 80px rgb(3, 156, 67),
+            0 0 90px rgb(3, 156, 67),
+            0 0 100px rgb(3, 156, 67),
+            0 0 150px rgb(3, 156, 67);
+    }
+
+    0% {
+        text-shadow:
+            0 0 4px #fff,
+            0 0 10px #fff,
+            0 0 18px #fff,
+            0 0 38px rgb(3, 156, 67),
+            0 0 73px rgb(3, 156, 67),
+            0 0 80px rgb(3, 156, 67),
+            0 0 94px rgb(3, 156, 67),
+            0 0 140px rgb(3, 156, 67);
+    }
+}
+
+a {
+    /* design of the button to restart the game */
+    position: relative;
+    display: inline-block;
+    padding: 15px 30px;
+    color: #2196f3;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    text-decoration: none;
+    font-size: 24px;
+    overflow: hidden;
+    transition: 1s;
+}
+
+a:hover {
+    /* when mouse over */
+    color: #255784;
+    background: #2196f3;
+    box-shadow: 0 0 10px #2196f3, 0 0 40px #2196f3, 0 0 80px #2196f3;
+    transition-delay: 1s;
+}
+
+a span {
+    position: absolute;
+    display: block;
+}
+
+a span:nth-child(1) {
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, #2196f3);
+}
+
+a:hover span:nth-child(1) {
+    /* when hover span begin animation */
+    left: 100%;
+    transition: 1s;
+}
+
+a span:nth-child(3) {
+    bottom: 0;
+    right: -100%;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(270deg, transparent, #2196f3);
+}
+
+a:hover span:nth-child(3) {
+    right: 100%;
+    transition: 1s;
+    transition-delay: 0.5s;
+}
+
+a span:nth-child(2) {
+    top: -100%;
+    right: 0;
+    width: 2px;
+    height: 100%;
+    background: linear-gradient(180deg, transparent, #2196f3);
+}
+
+a:hover span:nth-child(2) {
+    top: 100%;
+    transition: 1s;
+    transition-delay: 0.25s;
+}
+
+a span:nth-child(4) {
+    bottom: -100%;
+    left: 0;
+    width: 2px;
+    height: 100%;
+    background: linear-gradient(360deg, transparent, #2196f3);
+}
+
+a:hover span:nth-child(4) {
+    bottom: 100%;
+    transition: 1s;
+    transition-delay: 0.75s;
+}
+
+#restart {
+    position: absolute;
+    padding: 5px 5px 5px 10px;
+    bottom: 80px;
+}

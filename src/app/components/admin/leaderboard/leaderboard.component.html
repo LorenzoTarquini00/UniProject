@@ -1,0 +1,16 @@
+<body>
+    <h2>Leaderboard</h2> <!-- title -->
+
+    <table> <!-- table with players ordered -->
+        <tr>
+            <th>Name</th>
+            <th>Email</th>
+            <th>High Score</th>
+        </tr>
+        <tr *ngFor="let user of players$ | async"> <!-- gets the user informations -->
+            <td>{{ user.name }}</td>
+            <td>{{ user.email }}</td>
+            <td>{{ user.highScore }}</td>
+        </tr>
+    </table>
+</body>

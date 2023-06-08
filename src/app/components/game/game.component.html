@@ -1,0 +1,34 @@
+<body>
+    <div>
+        <h2 class="neonText">Scrambled Word:</h2> <!-- title of the page -->
+
+        <h4 class="neonText">{{ scrambledWord }}</h4> <!-- scrambled word -->
+        <input type="text" placeholder="your guess" [(ngModel)]="userInput" [disabled]="gameOver"
+            (keydown.enter)="checkWord()"><!-- input box when enter is pressed launch checkword than become disable if gameover condition is true -->
+
+
+        <h1 *ngIf="gameOver">Game Over! Your Score: {{ score }}</h1>
+        <!-- gameover allert appears only when gameover condition is true -->
+
+        <!--<div *ngIf="originalWord">
+            <p>Original word: {{ originalWord }}</p> 
+        </div>-->
+
+        <!--div for testing and see the word not scrambled-->
+
+        <div>
+            <h6>Correct answers: {{ score }}</h6> <!-- counter for correct answers gets the actual score -->
+        </div>
+
+        <h1>High Score: {{ highScore }}</h1> <!-- get the actual player highscore -->
+    </div>
+    <div id="restart" *ngIf="gameOver"> <!-- appears only when gameover is true and reveal the restart button -->
+        <a (click)="restartGame()">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            Restart Game
+        </a>
+    </div>
+</body>

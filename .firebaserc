@@ -1,0 +1,16 @@
+{
+  "projects": {
+    "default": "angular-7e7df",
+    "firebase-project": "angular-7e7df"
+  },
+  "targets": {
+    "angular-7e7df": {
+      "hosting": {
+        "UniProject": [
+          "angular-7e7df"
+        ]
+      }
+    }
+  },
+  "etags": {}
+}
