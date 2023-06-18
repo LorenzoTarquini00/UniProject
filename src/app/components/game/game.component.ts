@@ -12,7 +12,7 @@ export class GameComponent implements OnInit {
 
   constructor(private userService: UserService) { }
 
-  words: string[] = ['avventura', 'sole', 'casa', 'elefante', 'fragola', 'mare', 'magico', 'travolgente', 'zaino', 'albero', 'sorprendente', 'scherzo', 'gatto', 'arcobaleno', 'giocattolo', 'meraviglia', 'fragile', 'montagna', 'ninja', 'sogno', 'libro', 'cane', 'tigre', 'fantastico', 'zanzara', 'cielo', 'velocità', 'mistero', 'frutta', 'notte', 'giraffa', 'radicale', 'crociera', 'tesoro', 'fiamma', 'carta', 'conquista', 'labbro', 'terra', 'pinguino', 'esplorare', 'luce', 'astronave', 'tornado', 'dolce', 'fragoroso', 'penna', 'labirinto', 'scimmia', 'misterioso', 'maggiore', 'risata'];
+  words: string[] = ['sole', 'casa', 'pane', 'amore', 'mare', 'porta', 'oro', 'cane', 'mela', 'vino', 'roma', 'luna', 'riso', 'sale', 'vita', 'seta', 'sano', 'polo', 'dito', 'gara', 'vita', 'mano', 'pelo', 'tappo', 'piuma', 'fiat', 'tubo', 'muro', 'neve', 'vento', 'pepe', 'togo', 'lago', 'arco', 'fore', 'rana', 'pomo', 'nota', 'zeta', 'musa', 'roba', 'baba', 'piro', 'taco', 'bari', 'rete', 'sera', 'bici', 'cosa', 'brio', 'fuso'];
   //array of words to use in the game
   scrambledWord = ''; //memorize the scrambled word
   userInput = ''; //input of the user
