@@ -12,7 +12,7 @@ export class GameComponent implements OnInit {
 
   constructor(private userService: UserService) { }
 
-  words: string[] = ['sole', 'casa', 'pane', 'amore', 'mare', 'porta', 'oro', 'cane', 'mela', 'vino', 'roma', 'luna', 'riso', 'sale', 'vita', 'seta', 'sano', 'polo', 'dito', 'gara', 'vita', 'mano', 'pelo', 'tappo', 'piuma', 'fiat', 'tubo', 'muro', 'neve', 'vento', 'pepe', 'togo', 'lago', 'arco', 'fore', 'rana', 'pomo', 'nota', 'zeta', 'musa', 'roba', 'baba', 'piro', 'taco', 'bari', 'rete', 'sera', 'bici', 'cosa', 'brio', 'fuso'];
+  words: string[] = ['sole', 'casa', 'pane', 'amore', 'mare', 'porta', 'oro', 'cane', 'mela', 'vino', 'roma', 'luna', 'riso', 'sale', 'vita', 'seta', 'sano', 'polo', 'dito', 'gara', 'vita', 'mano', 'pelo', 'tappo', 'piuma', 'cielo', 'tubo', 'muro', 'neve', 'vento', 'pepe', 'togo', 'lago', 'arco', 'fore', 'rana', 'pomo', 'nota', 'zeta', 'musa', 'roba', 'baba', 'piro', 'taco', 'bari', 'rete', 'sera', 'bici', 'cosa', 'brio', 'fuso'];
   //array of words to use in the game
   scrambledWord = ''; //memorize the scrambled word
   userInput = ''; //input of the user
